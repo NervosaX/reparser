@@ -13,8 +13,10 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         
-        display = Display(visible=0, size=(800, 600))
-        display.start()
+        if settings.USE_HIDDEN_DISPLAY:
+            display = Display(visible=0, size=(800, 600))
+            display.start()
+
         browser = webdriver.Firefox()
 
         realestate = modules.realestate.CollectData(**{
@@ -45,4 +47,6 @@ class Command(BaseCommand):
 
 
         browser.close()
-        display.stop()
+
+        if settings.USE_HIDDEN_DISPLAY:
+            display.stop()

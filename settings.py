@@ -22,6 +22,7 @@ DATABASES = {
     }
 }
 
+USE_HIDDEN_DISPLAY = False
 REAL_ESTATE_URL = "http://www.realestate.com.au"
 REAL_ESTATE_SEARCH_STRING = "in-mount+waverley%2c+vic+3149%3b+clayton+south%2c+vic+3169%3b+/list-1?source=location-search"
 METLINK_BASE_URL = "http://jp.ptv.vic.gov.au/ptv/"
@@ -163,3 +164,8 @@ LOGGING = {
         },
     }
 }
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
