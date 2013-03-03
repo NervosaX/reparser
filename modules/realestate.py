@@ -143,5 +143,4 @@ class CollectData:
             'carspaces': carspaces
         }
 
-        self._saveData(**data)
         return data
