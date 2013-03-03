@@ -84,7 +84,7 @@ class GMaps:
                     float(result["lng"]), float(result["lat"]))
 
                 data = {
-                    'title': result['titleNoFormatting'],
+                    'line_name': result['titleNoFormatting'],
                     'distance': round(distance, 2)
                 }
 
