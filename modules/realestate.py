@@ -145,6 +145,3 @@ class CollectData:
 
         self._saveData(**data)
         return data
-
-    def _saveData(self, **kwargs):
-        pass
