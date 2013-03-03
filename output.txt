@@ -1,0 +1,825 @@
+
+########################################
+#              Basic Info              #
+########################################
+Address: 1 Wallabah Street, Mount Waverley, Vic 3149
+Title: Much Loved Family Home
+Agent: Harcourts - Judd White
+Price: Auction 06 Apr 2013 Auction
+Link: /property-house-vic-mount+waverley-113130103
+
+########################################
+#               Features               #
+########################################
+Rooms: 3
+Bathrooms: 2
+Carport/garage: 3
+
+########################################
+#               Railways               #
+########################################
+Syndal
+distance: 1.82336134186 km
+Mount Waverley
+distance: 1.89677671103 km
+Glen Waverley
+distance: 2.45172131354 km
+Jordanville
+distance: 2.92866823764 km
+Holmesglen
+distance: 4.5807928642 km
+Carnegie Station
+distance: 7.04903380059 km
+
+########################################
+#              ADSL2 Speed             #
+########################################
+<div>You are 3378 m from TYHO as the crow flies.<br>Estimated cable length of 4053.6 m.<br>Estimated speed of 2000<br>Zone 1<br/></br></br></br></div>
+
+########################################
+#              Metlink time            #
+########################################
+Depart Time: Mon, 8:03 am
+Arrive Time: Mon, 8:53 am
+Duration: 0h 50m
+
+***********************************************************************************
+***********************************************************************************
+
+########################################
+#              Basic Info              #
+########################################
+Address: 2 Jack Street, Mount Waverley, Vic 3149
+Title: Scarce as Hens Teeth
+Agent: Stockdale & Leggo - Mount Waverley
+Price: Contact Agent
+Link: /property-house-vic-mount+waverley-113073019
+
+########################################
+#               Features               #
+########################################
+Rooms: 3
+Bathrooms: 2
+Carport/garage: 2
+
+########################################
+#               Railways               #
+########################################
+Jordanville
+distance: 0.69425556397 km
+Mount Waverley
+distance: 0.714750120469 km
+Holmesglen
+distance: 2.61884107377 km
+Syndal
+distance: 2.57069886835 km
+Carnegie Station
+distance: 5.53310003121 km
+Ashburton
+distance: 3.69936604543 km
+Alamein
+distance: 3.60569382564 km
+
+########################################
+#              ADSL2 Speed             #
+########################################
+<div>You are 848 m from JVLE as the crow flies.<br>Estimated cable length of 1356.8 m.<br>Estimated speed of 18666<br>Zone 1<br/></br></br></br></div>
+
+########################################
+#              Metlink time            #
+########################################
+Depart Time: Mon, 8:04 am
+Arrive Time: Mon, 8:39 am
+Duration: 0h 35m
+
+***********************************************************************************
+***********************************************************************************
+
+########################################
+#              Basic Info              #
+########################################
+Address: 61 Catherine Avenue, Mount Waverley, Vic 3149
+Title: Auction This Saturday 12noon, Free Coffee for all!
+Agent: Buxton - Oakleigh
+Price: Contact Agent Auction
+Link: /property-house-vic-mount+waverley-112968263
+
+########################################
+#               Features               #
+########################################
+Rooms: 5
+Bathrooms: 2
+Carport/garage: 3
+
+########################################
+#               Railways               #
+########################################
+Mount Waverley
+distance: 2.12248599318 km
+Jordanville
+distance: 2.53226396587 km
+Syndal
+distance: 2.91760078179 km
+Holmesglen
+distance: 3.75686967095 km
+Huntingdale
+distance: 2.70399332696 km
+Carnegie Station
+distance: 5.92513169074 km
+Glen Waverley
+distance: 3.70064427592 km
+
+########################################
+#              ADSL2 Speed             #
+########################################
+<div>You are 1710 m from CLAY as the crow flies.<br>Estimated cable length of 2479.5 m.<br>Estimated speed of 10666<br>Zone 1<br/></br></br></br></div>
+
+########################################
+#              Metlink time            #
+########################################
+Depart Time: Mon, 8:06 am
+Arrive Time: Mon, 8:51 am
+Duration: 0h 45m
+
+***********************************************************************************
+***********************************************************************************
+
+########################################
+#              Basic Info              #
+########################################
+Address: 133 Stephensons Road, Mount Waverley, Vic 3149
+Title: Terrific Bones to work with for a Renovation.
+Agent: Unknown
+Price: ...Sale - Over $565,000
+Link: /property-house-vic-mount+waverley-112521871
+
+########################################
+#               Features               #
+########################################
+Rooms: 3
+Bathrooms: 1
+Carport/garage: 2
+
+########################################
+#               Railways               #
+########################################
+Mount Waverley
+distance: 1.30438241692 km
+Jordanville
+distance: 1.97022660809 km
+Syndal
+distance: 2.11116490939 km
+Holmesglen
+distance: 3.78850399648 km
+Glen Waverley
+distance: 3.30229556383 km
+Carnegie Station
+distance: 6.85283047951 km
+
+########################################
+#              ADSL2 Speed             #
+########################################
+<div>You are 1745 m from TYHO as the crow flies.<br>Estimated cable length of 2530.25 m.<br>Estimated speed of 10666<br>Zone 1<br/></br></br></br></div>
+
+########################################
+#              Metlink time            #
+########################################
+Depart Time: Mon, 8:07 am
+Arrive Time: Mon, 8:46 am
+Duration: 0h 39m
+
+***********************************************************************************
+***********************************************************************************
+
+########################################
+#              Basic Info              #
+########################################
+Address: 5 Solomon Street, Mount Waverley, Vic 3149
+Title: Spacious family home
+Agent: Stockdale & Leggo - Glen Waverley
+Price: Offers over $550,000
+Link: /property-house-vic-mount+waverley-111399607
+
+########################################
+#               Features               #
+########################################
+Rooms: 5
+Bathrooms: 2
+Carport/garage: 2
+
+########################################
+#               Railways               #
+########################################
+Jordanville
+distance: 1.55244050847 km
+Holmesglen
+distance: 2.19355844877 km
+Mount Waverley
+distance: 2.13975570964 km
+Carnegie Station
+distance: 4.46691738929 km
+Huntingdale
+distance: 2.64283054502 km
+Hughesdale
+distance: 2.87361933213 km
+Alamein
+distance: 3.32493796679 km
+
+########################################
+#              ADSL2 Speed             #
+########################################
+<div>You are 1444 m from JVLE as the crow flies.<br>Estimated cable length of 2238.2 m.<br>Estimated speed of 12666<br>Zone 1<br/></br></br></br></div>
+
+########################################
+#              Metlink time            #
+########################################
+Depart Time: Mon, 8:05 am
+Arrive Time: Mon, 8:51 am
+Duration: 0h 46m
+
+***********************************************************************************
+***********************************************************************************
+
+########################################
+#              Basic Info              #
+########################################
+Address: 1 Cremin Court, Mount Waverley, Vic 3149
+Title: “With Everything at your fingertips”
+Agent: Woodards - Mount Waverley
+Price: Contact Agent
+Link: /property-house-vic-mount+waverley-111287219
+
+########################################
+#               Features               #
+########################################
+Rooms: 3
+Bathrooms: 1
+Carport/garage: 2
+
+########################################
+#               Railways               #
+########################################
+Mount Waverley
+distance: 2.04153785604 km
+Jordanville
+distance: 2.37107944692 km
+Syndal
+distance: 2.96005670312 km
+Holmesglen
+distance: 3.57084277361 km
+Huntingdale
+distance: 2.66998905691 km
+Carnegie Station
+distance: 5.75938283593 km
+
+########################################
+#              ADSL2 Speed             #
+########################################
+<div>You are 1724 m from CLAY as the crow flies.<br>Estimated cable length of 2499.8 m.<br>Estimated speed of 10666<br>Zone 1<br/></br></br></br></div>
+
+########################################
+#              Metlink time            #
+########################################
+Depart Time: Mon, 8:02 am
+Arrive Time: Mon, 8:51 am
+Duration: 0h 49m
+
+***********************************************************************************
+***********************************************************************************
+
+########################################
+#              Basic Info              #
+########################################
+Address: 15 Mantova Drive, Wheelers Hill, Vic 3150
+Title: Nothing Left To Do
+Agent: Barry Plant - Monash
+Price: Contact Agent Auction
+Link: /property-house-vic-wheelers+hill-112971487
+
+########################################
+#               Features               #
+########################################
+Rooms: 3
+Bathrooms: 1
+Carport/garage: 2
+
+########################################
+#               Railways               #
+########################################
+Westall
+distance: 4.40445945835 km
+Glen Waverley
+distance: 4.20568905112 km
+Springvale
+distance: 4.4434439733 km
+Sandown Park
+distance: 4.83375301868 km
+Syndal
+distance: 5.07460375586 km
+Noble Park
+distance: 5.81619498276 km
+Mount Waverley
+distance: 6.32766171399 km
+Clayton
+distance: 5.2535575013 km
+
+########################################
+#              ADSL2 Speed             #
+########################################
+<div>You are 2120 m from WHLL as the crow flies.<br>Estimated cable length of 2862 m.<br>Estimated speed of 8000<br>Zone 1<br/></br></br></br></div>
+
+########################################
+#              Metlink time            #
+########################################
+Depart Time: Mon, 8:04 am
+Arrive Time: Mon, 9:11 am
+Duration: 1h 07m
+
+***********************************************************************************
+***********************************************************************************
+
+########################################
+#              Basic Info              #
+########################################
+Address: 43 Meadowbrook Drive, Wheelers Hill, Vic 3150
+Title: Ideally Positioned with Room to Move!
+Agent: Harcourts - Judd White
+Price: Auction 13 Apr 2013 Auction
+Link: /property-house-vic-wheelers+hill-113185939
+
+########################################
+#               Features               #
+########################################
+Rooms: 3
+Bathrooms: 2
+Carport/garage: 2
+
+########################################
+#               Railways               #
+########################################
+Glen Waverley
+distance: 3.4486987095 km
+Westall
+distance: 4.39768804148 km
+Syndal
+distance: 4.26346758355 km
+Springvale
+distance: 4.76273221409 km
+Sandown Park
+distance: 5.30954175656 km
+Mount Waverley
+distance: 5.50422126299 km
+Clayton
+distance: 4.89315857573 km
+Jordanville
+distance: 6.66508543666 km
+
+########################################
+#              ADSL2 Speed             #
+########################################
+<div>You are 1304 m from WHLL as the crow flies.<br>Estimated cable length of 2021.2 m.<br>Estimated speed of 14000<br>Zone 1<br/></br></br></br></div>
+
+########################################
+#              Metlink time            #
+########################################
+Depart Time: Mon, 8:10 am
+Arrive Time: Mon, 9:11 am
+Duration: 1h 01m
+
+***********************************************************************************
+***********************************************************************************
+
+########################################
+#              Basic Info              #
+########################################
+Address: 19 Norfolk Street, Glen Waverley, Vic 3150
+Title: Explore The Options & Enjoy
+Agent: Jellis Craig - Mount Waverley
+Price: Contact Agent Auction
+Link: /property-house-vic-glen+waverley-113167647
+
+########################################
+#               Features               #
+########################################
+Rooms: 3
+Bathrooms: 1
+Carport/garage: 2
+
+########################################
+#               Railways               #
+########################################
+Syndal
+distance: 2.45931014401 km
+Glen Waverley
+distance: 2.60299796865 km
+Mount Waverley
+distance: 2.92033256048 km
+Jordanville
+distance: 3.91179017375 km
+Westall
+distance: 4.49317863703 km
+Clayton
+distance: 3.60539560075 km
+Holmesglen
+distance: 5.44658911401 km
+
+########################################
+#              ADSL2 Speed             #
+########################################
+<div>You are 1563 m from WHLL as the crow flies.<br>Estimated cable length of 2266.35 m.<br>Estimated speed of 12000<br>Zone 1<br/></br></br></br></div>
+
+########################################
+#              Metlink time            #
+########################################
+Depart Time: Mon, 8:02 am
+Arrive Time: Mon, 8:51 am
+Duration: 0h 49m
+
+***********************************************************************************
+***********************************************************************************
+
+########################################
+#              Basic Info              #
+########################################
+Address: 12 Reynolds Avenue, Wheelers Hill, Vic 3150
+Title: Newly Renovated Five Bedroom Home
+Agent: Roger Davis Real Estate - Glen Waverley
+Price: Offers above $638,000
+Link: /property-house-vic-wheelers+hill-112687223
+
+########################################
+#               Features               #
+########################################
+Rooms: 5
+Bathrooms: 2
+Carport/garage: 2
+
+########################################
+#               Railways               #
+########################################
+Glen Waverley
+distance: 3.86519752904 km
+Syndal
+distance: 4.86733227361 km
+Westall
+distance: 5.14308157347 km
+Sandown Park
+distance: 5.5524174014 km
+Springvale
+distance: 5.2008784387 km
+Mount Waverley
+distance: 6.29368411204 km
+Noble Park
+distance: 6.44517860115 km
+
+########################################
+#              ADSL2 Speed             #
+########################################
+<div>You are 2213 m from WHLL as the crow flies.<br>Estimated cable length of 2987.55 m.<br>Estimated speed of 7000<br>Zone 1<br/></br></br></br></div>
+
+########################################
+#              Metlink time            #
+########################################
+Depart Time: Mon, 8:08 am
+Arrive Time: Mon, 9:11 am
+Duration: 1h 03m
+
+***********************************************************************************
+***********************************************************************************
+
+########################################
+#              Basic Info              #
+########################################
+Address: 5 Camden Court, Glen Waverley, Vic 3150
+Title: A Sure Thing!
+Agent: Harcourts - Judd White
+Price: Auction 02 Mar 2013 Auction
+Link: /property-house-vic-glen+waverley-112871031
+
+########################################
+#               Features               #
+########################################
+Rooms: 4
+Bathrooms: 2
+Carport/garage: 2
+
+########################################
+#               Railways               #
+########################################
+Glen Waverley
+distance: 1.8136444513 km
+Syndal
+distance: 3.01326561343 km
+Mount Waverley
+distance: 4.87339724916 km
+Jordanville
+distance: 6.25195061366 km
+Heatherdale
+distance: 7.07340016624 km
+Nunawading Railway Station
+distance: 6.45944040125 km
+
+########################################
+#              ADSL2 Speed             #
+########################################
+<div>You are 3322 m from WHLL as the crow flies.<br>Estimated cable length of 3986.4 m.<br>Estimated speed of 2000<br>Zone 1<br/></br></br></br></div>
+
+########################################
+#              Metlink time            #
+########################################
+Depart Time: Mon, 8:01 am
+Arrive Time: Mon, 8:53 am
+Duration: 0h 52m
+
+***********************************************************************************
+***********************************************************************************
+
+########################################
+#              Basic Info              #
+########################################
+Address: 22 Collins Street, Chadstone, Vic 3148
+Title: An exciting future ahead!
+Agent: Buxton - Ashburton
+Price: Contact Agent Auction
+Link: /property-house-vic-chadstone-113109039
+
+########################################
+#               Features               #
+########################################
+Rooms: 3
+Bathrooms: 1
+Carport/garage: 4
+
+########################################
+#               Railways               #
+########################################
+Holmesglen
+distance: 0.428673776513 km
+Jordanville
+distance: 1.62703322564 km
+Alamein
+distance: 1.55917755274 km
+Carnegie Station
+distance: 3.33170601189 km
+Ashburton
+distance: 1.97706444578 km
+East Malvern
+distance: 2.18334312678 km
+Alamein
+distance: 1.55917755274 km
+
+########################################
+#              ADSL2 Speed             #
+########################################
+<div>You are 1435 m from JVLE as the crow flies.<br>Estimated cable length of 2224.25 m.<br>Estimated speed of 12666<br>Zone 1<br/></br></br></br></div>
+
+########################################
+#              Metlink time            #
+########################################
+Depart Time: Mon, 8:02 am
+Arrive Time: Mon, 8:32 am
+Duration: 0h 30m
+
+***********************************************************************************
+***********************************************************************************
+
+########################################
+#              Basic Info              #
+########################################
+Address: 3 Fernly Court, Wheelers Hill, Vic 3150
+Title: Picture Perfect!
+Agent: Harcourts - Judd White
+Price: Auction 16 Mar 2013 Auction
+Link: /property-house-vic-wheelers+hill-112816163
+
+########################################
+#               Features               #
+########################################
+Rooms: 3
+Bathrooms: 1
+Carport/garage: 2
+
+########################################
+#               Railways               #
+########################################
+Glen Waverley
+distance: 4.74940649576 km
+Syndal
+distance: 5.89216932572 km
+Westall
+distance: 6.30737022475 km
+Sandown Park
+distance: 6.16425549607 km
+Springvale
+distance: 6.04959533551 km
+Noble Park
+distance: 6.71822463869 km
+
+########################################
+#              ADSL2 Speed             #
+########################################
+<div>You are 3573 m from WHLL as the crow flies.<br>Estimated cable length of 4287.6 m.<br>Estimated speed of 1500<br>Zone 1<br/></br></br></br></div>
+
+########################################
+#              Metlink time            #
+########################################
+Depart Time: Mon, 8:05 am
+Arrive Time: Mon, 9:11 am
+Duration: 1h 06m
+
+***********************************************************************************
+***********************************************************************************
+
+########################################
+#              Basic Info              #
+########################################
+Address: 3 Delmore Crescent, Glen Waverley, Vic 3150
+Title: A Renovated Classic
+Agent: Barry Plant - Monash
+Price: AUCTION Auction
+Link: /property-house-vic-glen+waverley-113081571
+
+########################################
+#               Features               #
+########################################
+Rooms: 3
+Bathrooms: 2
+Carport/garage: 2
+
+########################################
+#               Railways               #
+########################################
+Syndal
+distance: 1.34305719237 km
+Glen Waverley
+distance: 2.01130411024 km
+Mount Waverley
+distance: 2.34745661954 km
+Jordanville
+distance: 3.53071454759 km
+Holmesglen
+distance: 5.45287498972 km
+Laburnum
+distance: 4.90152125699 km
+
+########################################
+#              ADSL2 Speed             #
+########################################
+<div>You are 306 m from TYHO as the crow flies.<br>Estimated cable length of 504.9 m.<br>Estimated speed of 24000<br>Zone 1<br/></br></br></br></div>
+
+########################################
+#              Metlink time            #
+########################################
+Depart Time: Mon, 8:00 am
+Arrive Time: Mon, 8:46 am
+Duration: 0h 46m
+
+***********************************************************************************
+***********************************************************************************
+
+########################################
+#              Basic Info              #
+########################################
+Address: 161 Waverley Road, Chadstone, Vic 3148
+Title: Potential Plus on 844m2!
+Agent: Barry Plant - Mount Waverley
+Price: $600,000+ Auction
+Link: /property-house-vic-chadstone-113068051
+
+########################################
+#               Features               #
+########################################
+Rooms: 4
+Bathrooms: 1
+Carport/garage: 2
+
+########################################
+#               Railways               #
+########################################
+Jordanville
+distance: 1.00640437261 km
+Holmesglen
+distance: 1.79025177697 km
+Mount Waverley
+distance: 1.90214970845 km
+Carnegie Station
+distance: 4.40300045957 km
+Alamein
+distance: 2.91206249145 km
+Ashburton
+distance: 3.23655501316 km
+Hughesdale
+distance: 3.02085713363 km
+
+########################################
+#              ADSL2 Speed             #
+########################################
+<div>You are 870 m from JVLE as the crow flies.<br>Estimated cable length of 1392 m.<br>Estimated speed of 18000<br>Zone 1<br/></br></br></br></div>
+
+########################################
+#              Metlink time            #
+########################################
+Depart Time: Mon, 8:01 am
+Arrive Time: Mon, 8:39 am
+Duration: 0h 38m
+
+***********************************************************************************
+***********************************************************************************
+
+########################################
+#              Basic Info              #
+########################################
+Address: 32 Radleigh Drive, Wheelers Hill, Vic 3150
+Title: IT'S ALL HERE
+Agent: Reed Estate Agents - Mt Waverley
+Price: $650,000
+Link: /property-house-vic-wheelers+hill-113064727
+
+########################################
+#               Features               #
+########################################
+Rooms: 4
+Bathrooms: 2
+Carport/garage: 2
+
+########################################
+#               Railways               #
+########################################
+Glen Waverley
+distance: 4.07087867293 km
+Westall
+distance: 4.6984745273 km
+Syndal
+distance: 4.99415155818 km
+Springvale
+distance: 4.73989051592 km
+Sandown Park
+distance: 5.1104307414 km
+Noble Park
+distance: 6.05196900511 km
+Mount Waverley
+distance: 6.31803349222 km
+Clayton
+distance: 5.49649892087 km
+
+########################################
+#              ADSL2 Speed             #
+########################################
+<div>You are 2140 m from WHLL as the crow flies.<br>Estimated cable length of 2889 m.<br>Estimated speed of 8000<br>Zone 1<br/></br></br></br></div>
+
+########################################
+#              Metlink time            #
+########################################
+Depart Time: Mon, 8:06 am
+Arrive Time: Mon, 9:11 am
+Duration: 1h 05m
+
+***********************************************************************************
+***********************************************************************************
+
+########################################
+#              Basic Info              #
+########################################
+Address: 33 Alex Avenue, Wheelers Hill, Vic 3150
+Title: A Spacious & Unique Family Home
+Agent: 33 Alex Avenue, Wheelers Hill, Vic 3150
+Price: AUCTION Auction
+Link: /property-house-vic-wheelers+hill-113054535
+
+########################################
+#               Features               #
+########################################
+Rooms: 5
+Bathrooms: 3
+Carport/garage: 2
+
+########################################
+#               Railways               #
+########################################
+Glen Waverley
+distance: 3.9118060613 km
+Syndal
+distance: 5.04820093616 km
+Westall
+distance: 6.05103778733 km
+Sandown Park
+distance: 6.31055398207 km
+Springvale
+distance: 6.04107699136 km
+Mount Waverley
+distance: 6.64077580152 km
+
+########################################
+#              ADSL2 Speed             #
+########################################
+<div>You are 2832 m from WHLL as the crow flies.<br>Estimated cable length of 3540 m.<br>Estimated speed of 3500<br>Zone 1<br/></br></br></br></div>
+
+########################################
+#              Metlink time            #
+########################################
+Depart Time: Mon, 8:07 am
+Arrive Time: Mon, 9:11 am
+Duration: 1h 04m
+
+***********************************************************************************
+***********************************************************************************
