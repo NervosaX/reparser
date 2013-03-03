@@ -43,7 +43,12 @@ class ADSL2:
 
         while (True):
             browser.get(settings.ADSL_URL)
-            form = browser.find_elements_by_tag_name("form")[2]
+
+            try:
+                form = browser.find_elements_by_tag_name("form")[2]
+            except IndexError:
+                raise NoSuchElementException
+
             form_address = form.find_element_by_name("Address")
             form_address.send_keys(address + Keys.RETURN)
 
