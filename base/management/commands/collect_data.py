@@ -30,7 +30,7 @@ class Command(BaseCommand):
 
             # Get nearby railways
             gmaps = modules.gmaps.GMaps()
-            distance = gmaps.get_distance_from_railway(address)
+            distance = gmaps.get_distance_from_railways(address)
             print distance
 
             # Get possible ADSL2+ speed

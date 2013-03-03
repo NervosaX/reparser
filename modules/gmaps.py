@@ -49,7 +49,7 @@ class GMaps:
         The amount of time in seconds before retrying a gmaps
         parse
     """
-    def get_distance_from_railway(self, address, max_distance=3, retry_wait=1):
+    def get_distance_from_railways(self, address, max_distance=3, retry_wait=1):
         attempts = 0
         results = []
 
