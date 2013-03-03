@@ -38,17 +38,14 @@ class Command(BaseCommand):
                 # Get nearby railways
                 gmaps = modules.gmaps.GMaps()
                 distances = gmaps.get_distance_from_railways(address)
-                print distances
 
                 # Get possible ADSL2+ speed
                 adsl2 = modules.adsl2.ADSL2()
                 adsl2_data = adsl2.get(address, browser)
-                print adsl2_data
 
                 # Get public travel time from address
                 pt = modules.ptmelb.PublicTransport()
                 pt_data = pt.get(address, browser)
-                print pt_data
 
                 # Add to database
                 print "Does not exist, creating...", address
