@@ -42,7 +42,23 @@ class Detail(models.Model):
         blank=True
         )
 
+    # ADSL2 details
+    crow_fly_distance = models.CharField(
+        max_length=100,
+        blank=True
+        )
 
+    cable_length = models.CharField(
+        max_length=100,
+        blank=True
+        )
+
+    estimated_speed = models.CharField(
+        max_length=100,
+        blank=True
+        )
+
+    
 class RailwayPosition(models.Model):
 
     detail = models.ForeignKey(Detail)

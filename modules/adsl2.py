@@ -1,4 +1,5 @@
 import time
+import re
 
 from django.conf import settings
 
@@ -56,8 +57,13 @@ class ADSL2:
                 divs = [x for x in adsl_source.findAll("div") if "Estimated" in x.getText()]
                 adsldata = divs[len(divs) - 1]
 
-                # TODO: Split this data up!
-                return adsldata
+                values = re.findall('(\d+[.]?[\d]+)', str(adsldata))
+
+                return {
+                    'crow_fly_distance': values[0],
+                    'cable_length': values[1],
+                    'estimated_speed': values[2]
+                }
 
             except NoSuchElementException:
                 # Some sort of error occurred! Either the address is malformed,
