@@ -55,7 +55,11 @@ class ADSL2:
 
                 adsl_source = BeautifulSoup(browser.find_element_by_id("map").get_attribute("innerHTML"))
                 divs = [x for x in adsl_source.findAll("div") if "Estimated" in x.getText()]
-                adsldata = divs[len(divs) - 1]
+
+                if len(divs) > 0:
+                    adsldata = divs[len(divs) - 1]
+                else:
+                    raise NoSuchElementException
 
                 values = re.findall('(\d+[.]?[\d]+)', str(adsldata))
 
