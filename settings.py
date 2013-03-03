@@ -24,7 +24,7 @@ DATABASES = {
 
 USE_HIDDEN_DISPLAY = False
 REAL_ESTATE_URL = "http://www.realestate.com.au"
-REAL_ESTATE_SEARCH_STRING = "in-mount+waverley%2c+vic+3149%3b+clayton+south%2c+vic+3169%3b+/list-1?source=location-search"
+REAL_ESTATE_SEARCH_STRING = "property-house-with-3-bedrooms-between-0-650000-in-mount+waverley%2c+vic+3149%3b+chelsea+heights%2c+vic+3196%3b+chelsea%2c+vic+3196%3b+cheltenham%2c+vic+3192%3b+oakleigh+south%2c+vic+3167%3b+huntingdale%3b+glen+waverley%2c+vic+3150%3b+highett%2c+vic+3190%3b+clayton%2c+vic+3168%3b+clarinda%2c+vic+3169%3b+clayton+north%2c+vic+3168%3b+moorabbin%2c+vic+3189%3b+ormond%2c+vic+3204%3b+mckinnon%2c+vic+3204%3b+bentleigh%2c+vic+3204%3b+bentleigh+east%2c+vic+3165%3b+burwood%2c+vic+3125%3b+ashwood%2c+vic+3147%3b+notting+hill%2c+vic+3168%3b+vermont+south%2c+vic+3133%3b+caulfield%2c+vic+3162/list-1?exteriorFeatures=garage&numParkingSpaces=2&maxBeds=any&misc=ex-under-contract&source=refinements"
 METLINK_BASE_URL = "http://jp.ptv.vic.gov.au/ptv/"
 METLINK_SEARCH_URL = "http://jp.ptv.vic.gov.au/ptv/XSLT_TRIP_REQUEST2?language=en&itdLPxx_view=advanced"
 ADSL_URL = "http://www.adsl2exchanges.com.au/"
