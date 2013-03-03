@@ -10,3 +10,4 @@ ipython==0.13.1
 mechanize==0.2.5
 selenium==2.31.0
 six==1.2.0
+South==0.7.6
