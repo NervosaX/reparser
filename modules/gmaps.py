@@ -87,6 +87,7 @@ class GMaps:
                     'line_name': result['titleNoFormatting'],
                     'distance': round(distance, 2)
                 }
+                print "Found Railway data..."
 
                 if (distance < max_distance):
                     results.append(data)

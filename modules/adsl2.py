@@ -67,6 +67,7 @@ class ADSL2:
                     raise NoSuchElementException
 
                 values = re.findall('(\d+[.]?[\d]+)', str(adsldata))
+                print "Found ADSL2 values..."
 
                 return {
                     'crow_fly_distance': values[0],

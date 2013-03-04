@@ -71,6 +71,7 @@ class PublicTransport:
                 arriveTime = tds[2].getText()
                 duration = tds[3].getText()
 
+                print "Found PTMelb data..."
                 return {
                     'departTime': departTime,
                     'arriveTime': arriveTime,

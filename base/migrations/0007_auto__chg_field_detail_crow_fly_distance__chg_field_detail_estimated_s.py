@@ -3,6 +3,7 @@ import datetime
 from south.db import db
 from south.v2 import SchemaMigration
 from django.db import models
+from base.models import Detail
 
 
 class Migration(SchemaMigration):
@@ -17,6 +18,13 @@ class Migration(SchemaMigration):
 
         # Changing field 'Detail.cable_length'
         db.alter_column(u'base_detail', 'cable_length', self.gf('django.db.models.fields.FloatField')(null=True))
+
+        for d in Detail.objects.all():
+            if d.crow_fly_distance == "":
+                d.crow_fly_distance = None
+                d.cable_length = None
+                d.estimated_speed = None
+                d.save()
 
     def backwards(self, orm):
 
