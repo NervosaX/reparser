@@ -65,6 +65,9 @@ class Command(BaseCommand):
             if detail['bedrooms'] < 3:
                 continue
 
+            if detail['bathrooms'] < 2:
+                continue
+
             if pt_data:
                 details.update({
                     'pt_depart_time': pt_data['departTime'],

@@ -104,7 +104,7 @@ class CollectData:
         # TODO: Make units searchable... Maybe change this to a regex
         banned = ["request", "available", "/", "-", "Lot", "&"]
         for ban in banned:
-            if ban in address:
+            if ban.lower() in address.lower():
                 return None
 
         title = body.find("h3", class_="title").getText()
