@@ -30,7 +30,7 @@ class PublicTransport:
     @retry_wait:
         The amount of time in seconds before retrying an address
     """
-    def get(self, address, browser, retry_wait=1):
+    def get(self, address, browser, retry_wait=2):
 
         attempts = 0
         wait = ui.WebDriverWait(browser, 3)

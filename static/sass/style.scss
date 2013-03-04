@@ -7,6 +7,7 @@
 // Now, you can simply include everything
 // (except print and helpers) by uncommeting this line
 @include h5bp-normalize;
+@import "bootstrap";
 
 // Or, you can import the "overrides" partial if
 // you want more control over individual mixins

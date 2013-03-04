@@ -29,6 +29,7 @@ class Command(BaseCommand):
 
         details = realestate.get()
 
+        
         for detail in details:
             address = detail['address']
 
@@ -46,10 +47,10 @@ class Command(BaseCommand):
                 # Get public travel time from address
                 pt = modules.ptmelb.PublicTransport()
                 pt_data = pt.get(address, browser)
+               
+                # TODO: Insert regex to get prices!
+                # (\d+,*\d*[Kk]?)*
 
-                # Add to database
-                print "Does not exist, creating...", address
-                
                 details = {
                     'address': detail['address'],
                     'title': detail['title'],
@@ -60,6 +61,9 @@ class Command(BaseCommand):
                     'carspaces': detail['carspaces'],
                 }
 
+                if detail['bedrooms'] < 3:
+                    continue
+
                 if pt_data:
                     details.update({
                         'pt_depart_time': pt_data['departTime'],
@@ -68,12 +72,17 @@ class Command(BaseCommand):
                     })
 
                 if adsl2_data:
+                    if adsl2_data['estimated_speed'] < 6000:
+                        continue
+
                     details.update({
                         'crow_fly_distance': adsl2_data['crow_fly_distance'],
                         'cable_length': adsl2_data['cable_length'],
                         'estimated_speed': adsl2_data['estimated_speed'],
                     })
 
+                # Add to database
+                print "Does not exist, creating...", address
                 new_detail = Detail.objects.create(**details)
 
                 if distances:
@@ -83,8 +92,6 @@ class Command(BaseCommand):
                             'line_name': distance['line_name'],
                             'distance': distance['distance']
                         })
-            else:
-                print "Already got it...", address
 
         browser.close()
 

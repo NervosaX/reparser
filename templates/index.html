@@ -1,7 +1,72 @@
 {% extends 'base.html' %}
 
+{% block extra_head %}
+<script>
+    $(document).ready(function() {
+        $("select").change(function(e) {
+            var id = $(this).data('id');
+            var val = $(this).find("option:selected").val();
+
+            $.post('{{ request.path }}', {
+                'id': id,
+                'val': val,
+                'csrfmiddlewaretoken': '{{ token }}'
+            });
+
+            if (val === "N")
+                $(this).closest("tr").remove();
+
+        }); 
+    });
+
+</script>
+{% endblock %}
+
 {% block contents %}
 
-    Hello world!
+    <table class="table table-condensed table-striped">
+        <tr>
+            <th>Status</th>
+            <th>Address</th>
+            <th>Price</th>
+            <th>Bedroom</th>
+            <th>Bathroom</th>
+            <th>Carspaces</th>
+            <th>To Richmond</th>
+            <th>ADSL2+ speed</th>
+            <th>Railway distance</th>
+            <th>Link</th>
+        </tr>        
+    {% for detail in details %}
+        <tr>
+            <td>
+                <select style="width: 120px;" data-id="{{ detail.id }}">
+                    {% for option in choice_types %}
+                        <option value="{{ option.0 }}"{% if option.0 == detail.status%} selected{% endif %}>{{ option.1 }}</option>
+                    {% endfor %}
+                </select>
+            </td>
+            <td>{{ detail.address }}</td>
+            <td>{{ detail.price }}</td>
+            <td>{{ detail.bedrooms }}</td>
+            <td>{{ detail.bathrooms }}</td>
+            <td>{{ detail.carspaces }}</td>
+            <td>{{ detail.pt_duration }}</td>
+            <td>{{ detail.estimated_speed }}</td>
+            {% with detail.get_nearest_railway as railway %}
+                <td>{{ railway.distance }}</td>
+            {% endwith %}
+            <td><a href="{{ REURL }}{{ detail.url }}">Link</a></td>
+        </tr>
+    {% endfor %}
+    </table>
 
+<script>
+    $.ready(function() {
+        $("select").change(function() {
+            alert("test");
+        }); 
+    });
+
+</script>
 {% endblock %}

@@ -51,6 +51,7 @@ class CollectData:
         while(True):
 
             self.current_page += 1
+            print "Current page: ", self.current_page
 
             # Exit loop if we exceed our max pages
             if self.max_pages != 0 and self.current_page >= self.max_pages:
@@ -101,9 +102,10 @@ class CollectData:
 
         # Ignore 'address on request' results and units
         # TODO: Make units searchable... Maybe change this to a regex
-        if ('request' in address or 'available' in address or "/" in address
-            or '&' in address):
-            return None
+        banned = ["request", "available", "/", "-", "Lot", "&"]
+        for ban in banned:
+            if ban in address:
+                return None
 
         title = body.find("h3", class_="title").getText()
 

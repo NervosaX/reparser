@@ -7,6 +7,11 @@
         <!--[if IE]>
             <link href="{{ STATIC_URL }}css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
         <![endif]-->
+        <link href="{{ STATIC_URL }}css/overrides.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+        <script src="{{ STATIC_URL }}js/jquery.js"></script>
+
+        {% block extra_head %}{% endblock %}
     </head>
 
     <body>
