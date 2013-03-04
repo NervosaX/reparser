@@ -46,7 +46,7 @@
                     {% endfor %}
                 </select>
             </td>
-            <td>{{ detail.address }}</td>
+            <td{% if detail.status == "P" %} style="color: blue; font-weight: bold;"{% endif %}>{{ detail.address }}</td>
             <td>{{ detail.price }}</td>
             <td>{{ detail.bedrooms }}</td>
             <td{% if detail.bathrooms < 2 %} style="color: red;"{% endif %}>{{ detail.bathrooms }}</td>
