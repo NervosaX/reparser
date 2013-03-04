@@ -49,10 +49,10 @@
             <td>{{ detail.address }}</td>
             <td>{{ detail.price }}</td>
             <td>{{ detail.bedrooms }}</td>
-            <td>{{ detail.bathrooms }}</td>
+            <td{% if detail.bathrooms < 2 %} style="color: red;"{% endif %}>{{ detail.bathrooms }}</td>
             <td>{{ detail.carspaces }}</td>
             <td>{{ detail.pt_duration }}</td>
-            <td>{{ detail.estimated_speed }}</td>
+            <td{% if detail.estimated_speed < 8000 and detail.estimated_speed != None %} style="color: red;"{% endif %}>{{ detail.estimated_speed }}</td>
             {% with detail.get_nearest_railway as railway %}
                 <td>{{ railway.distance }}</td>
             {% endwith %}
