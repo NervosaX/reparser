@@ -73,7 +73,7 @@ class Command(BaseCommand):
                 })
 
             if adsl2_data:
-                if adsl2_data['estimated_speed'] < 6000:
+                if adsl2_data['estimated_speed'] < 8000:
                     continue
 
                 details.update({
