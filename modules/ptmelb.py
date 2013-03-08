@@ -43,20 +43,20 @@ class PublicTransport:
             # Set to 4th day of Feb, 2013 (A Monday) at 8:00 AM
             browser.find_element_by_id("itdDateDay").send_keys("04")
             browser.find_element_by_name("itdDateYearMonth").send_keys("Feb 2013")
-            browser.find_element_by_name("itdTimeHour").send_keys("8")
+            browser.find_element_by_name("itdTimeHour").send_keys("5")
             browser.find_element_by_name("itdTimeMinute").send_keys("0")
-            browser.find_element_by_name("itdTimeAMPM").send_keys("AM")
+            browser.find_element_by_name("itdTimeAMPM").send_keys("PM")
             # Set fast walking pace
             browser.find_element_by_name("changeSpeed").send_keys("Fast (6 km/hr)")
             # Set longer walking distance
             browser.find_element_by_name("trITMOTvalue100").send_keys("15 min")
 
             # Select address
-            browser.find_element_by_id("tab1Link_origin").click()
-            # Insert address
-            browser.find_element_by_id("input_origin").send_keys(address)
+            browser.find_element_by_id("tab1Link_destination").click()
             # Insert Richmond station
-            browser.find_element_by_id("input_destination").send_keys("Richmond Railway Station" + Keys.RETURN)
+            browser.find_element_by_id("input_origin").send_keys("Collingwood Railway Station/Hoddle St")
+            # Insert address
+            browser.find_element_by_id("input_destination").send_keys(address + Keys.RETURN)
 
             try:
                 try:

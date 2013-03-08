@@ -17,7 +17,7 @@ class Index(TemplateView):
 
         context = super(Index, self).get_context_data(*args, **kwargs)
       
-        objects = Detail.objects.filter(status__in=['U', 'P']).order_by('status', 'pt_duration', '-estimated_speed', 'bathrooms')
+        objects = Detail.objects.exclude(status__in=['N']).order_by('status', 'pt_duration', '-estimated_speed', 'bathrooms')
 
         context["choice_types"] = Detail.DETAIL_CHOICE
         context["REURL"] = settings.REAL_ESTATE_URL

@@ -32,7 +32,7 @@
             <th>Bedroom</th>
             <th>Bathroom</th>
             <th>Carspaces</th>
-            <th>To Richmond</th>
+            <th>From Collingwood to address</th>
             <th>ADSL2+ speed</th>
             <th>Railway distance</th>
             <th>Link</th>
@@ -46,7 +46,12 @@
                     {% endfor %}
                 </select>
             </td>
-            <td{% if detail.status == "P" %} style="color: blue; font-weight: bold;"{% endif %}>{{ detail.address }}</td>
+            {% spaceless %}
+            <td style="{% if detail.status != "N" %}font-weight: bold;{% endif %}
+                       {% if detail.status == "P" %} color: blue;"
+                       {% elif detail.status == "S" %} color: green;"
+                       {% elif detail.status == "D" %} color: purple;{% endif %}">{{ detail.address }}</td>
+            {% endspaceless %}
             <td>{{ detail.price }}</td>
             <td>{{ detail.bedrooms }}</td>
             <td{% if detail.bathrooms < 2 %} style="color: red;"{% endif %}>{{ detail.bathrooms }}</td>

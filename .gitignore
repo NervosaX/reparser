@@ -1,3 +1,4 @@
 *.pyc
 local_settings.py
 sqlite.db
+.sass-cache

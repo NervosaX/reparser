@@ -4,6 +4,8 @@ from django.db import models
 class Detail(models.Model):
 
     DETAIL_CHOICE = (
+        ('S', 'Scheduled to view'),
+        ('D', 'Definitely like'),
         ('U', 'Not Checked'),
         ('P', 'Possible'),
         ('N', 'NO.')
