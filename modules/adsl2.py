@@ -38,6 +38,7 @@ class ADSL2:
         The amount of time in seconds before retrying an address
     """
     def get(self, address, browser, retry_wait=2):
+        print "... ... Getting ADSL2 Details"
         attempts = 0
         wait = ui.WebDriverWait(browser, 3)
 
@@ -67,13 +68,15 @@ class ADSL2:
                     raise NoSuchElementException
 
                 values = re.findall('(\d+[.]?[\d]+)', str(adsldata))
-                print "Found ADSL2 values..."
 
-                return {
-                    'crow_fly_distance': values[0],
-                    'cable_length': values[1],
-                    'estimated_speed': values[2]
-                }
+                try:
+                    return {
+                        'crow_fly_distance': values[0],
+                        'cable_length': values[1],
+                        'estimated_speed': values[2]
+                    }
+                except IndexError:
+                    raise NoSuchElementException
 
             except NoSuchElementException:
                 # Some sort of error occurred! Either the address is malformed,

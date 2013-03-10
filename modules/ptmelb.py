@@ -31,6 +31,7 @@ class PublicTransport:
         The amount of time in seconds before retrying an address
     """
     def get(self, address, browser, retry_wait=2):
+        print "... ... Getting PTMelb Details"
 
         attempts = 0
         wait = ui.WebDriverWait(browser, 3)
@@ -67,11 +68,14 @@ class PublicTransport:
                 source = BeautifulSoup(browser.find_element_by_class_name("p4").get_attribute("innerHTML"))
 
                 tds = source.findAll("td")
-                departTime = tds[1].getText()
-                arriveTime = tds[2].getText()
-                duration = tds[3].getText()
 
-                print "Found PTMelb data..."
+                try:
+                    departTime = tds[1].getText()
+                    arriveTime = tds[2].getText()
+                    duration = tds[3].getText()
+                except IndexError:
+                    raise NoSuchElementException
+
                 return {
                     'departTime': departTime,
                     'arriveTime': arriveTime,

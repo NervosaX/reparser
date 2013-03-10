@@ -50,6 +50,7 @@ class GMaps:
         parse
     """
     def get_distance_from_railways(self, address, max_distance=3, retry_wait=1):
+        print "... ... Getting GMaps Details"
         attempts = 0
         results = []
 
@@ -91,8 +92,17 @@ class GMaps:
                 if (distance < max_distance):
                     results.append(data)
 
-            if (results):
-                print "Found Railway data..."
-
             return results
-        
+    
+    def get_travel_time_between(self, address1, address2):
+        gmaps = GoogleMaps()
+        try:
+            directions = gmaps.directions(address1, address2)
+        except GoogleMapsError:
+            return None
+
+        if directions:
+            try:
+                return directions["Directions"]["summaryHtml"]
+            except AttributeError:
+                return None

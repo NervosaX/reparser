@@ -69,6 +69,12 @@ class Detail(models.Model):
         null=True
         )
 
+    # Travel to Oakleigh
+    oak_summary = models.CharField(
+        max_length=100,
+        blank=True
+        )
+
     def get_nearest_railway(self):
         if (self.railwayposition_set.count()):
             return min(self.railwayposition_set.all(), key=lambda i: i.distance)
