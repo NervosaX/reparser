@@ -3,6 +3,9 @@ from django.conf import settings
 from bs4 import BeautifulSoup
 from selenium.common.exceptions import NoSuchElementException
 
+import logging
+logger = logging.getLogger("applog")
+
 """
 Collects various data from a realestate.com.au
 search
@@ -42,8 +45,7 @@ class CollectData:
 
         # Open page with search string
         self.browser.get(startUrl)
-        print "Current url: ", startUrl
-
+        logger.debug("... current url: ..." + startUrl[-100:])
         # Scan current page (if values exist)
         addresses += self._scanPage(startUrl)
 
@@ -51,18 +53,16 @@ class CollectData:
         while(True):
 
             self.current_page += 1
-            print "Current page: ", self.current_page
 
             # Exit loop if we exceed our max pages
             if self.max_pages != 0 and self.current_page >= self.max_pages:
-                print "Exceeded max pages"
                 break
 
             # Check for next button
             try:
                 nextBtn = self.browser.find_element_by_class_name("nextLink")
                 nextBtn.click()
-                print "Current url: ", self.browser.current_url
+                logger.debug("... current url: ..." + self.browser.current_url[-100:])
                 addresses += self._scanPage(self.browser.current_url)
             except NoSuchElementException:
                 break

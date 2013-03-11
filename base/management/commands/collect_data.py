@@ -9,11 +9,9 @@ from pyvirtualdisplay import Display
 from base.models import Detail, RailwayPosition
 
 import re
-import datetime
 from datetime import timedelta
 
 import logging
-
 logger = logging.getLogger("applog")
 
 def tdelta(input):
@@ -30,9 +28,7 @@ class Command(BaseCommand):
     help = ""
 
     def handle(self, *args, **options):
-        print "--- RUNNING COLLECT DATA ---"
-        logger.debug("Running on: " + str(datetime.datetime.now()))
-
+        logger.debug("Initializing display ...")
         if settings.USE_HIDDEN_DISPLAY:
             display = Display(visible=0, size=(800, 600))
             display.start()
@@ -45,18 +41,33 @@ class Command(BaseCommand):
             #'max_pages': 1,    
         })
 
+        logger.debug("Getting realestate data ...")
         details = realestate.get()
-
         
         for detail in details:
             address = detail['address']
-
 
             exists = Detail.objects.filter(address=address)
             if exists:
                 continue
 
-            address 
+            logger.debug(address + " does not exist. Attempting data collection.")
+         
+            # TODO: Insert regex to get prices!
+            # (\d+,*\d*[Kk]?)*
+
+            details = {
+                'address': detail['address'],
+                'title': detail['title'],
+                'price': detail['price'],
+                'url': detail['url'],
+                'bedrooms': detail['bedrooms'],
+                'bathrooms': detail['bathrooms'],
+                'carspaces': detail['carspaces'],
+                'status': 'N', # A big fat NO unless it passes everything
+            }
+
+            new_detail = Detail.objects.create(**details)
 
             suburb_excludes = [
                 'Frankston', 'Cranbourne', 'Carrum Downs', 'Pakenham', 'North Clyde', 
@@ -67,99 +78,84 @@ class Command(BaseCommand):
             excluded = False
             for s_exclude in suburb_excludes:
                 if s_exclude in address > 0:
-                    print "... ... Bad Suburb, ignoring."
+                    logger.debug("... ... Bad Suburb, ignoring (" + s_exclude + ")")
                     excluded = True
                     break
 
             if excluded:
                 continue
 
-
-            print "Trying address", address, "... ..."
-          
-            # TODO: Insert regex to get prices!
-            # (\d+,*\d*[Kk]?)*
-
-            gmaps = modules.gmaps.GMaps()
-
-
-            details = {
-                'address': detail['address'],
-                'title': detail['title'],
-                'price': detail['price'],
-                'url': detail['url'],
-                'bedrooms': detail['bedrooms'],
-                'bathrooms': detail['bathrooms'],
-                'carspaces': detail['carspaces'],
-            }
-
-            detail = Detail.objects.create(**details)
-
-            directions = gmaps.get_travel_time_between(detail['address'], "Melbourne, Oakleigh, Victoria, Australia")
-            if directions:
-                detail.oak_summary = directions
-
             if detail['bedrooms'] < 3:
+                logger.debug("... ... ... Under three bedrooms. Skipping.")
                 continue
 
             if detail['bathrooms'] < 2:
+                logger.debug("... ... ... Under two bathrooms. Skipping.")
                 continue
 
             # Get public travel time from address
+            logger.debug("... ... PTMelb travel time from Collingwood to address.")
             pt = modules.ptmelb.PublicTransport()
             pt_data = pt.get(address, browser)
-
 
             if pt_data:
                 _td = tdelta(pt_data['duration'])
                 if _td > tdelta("1h 15m"):
-                    print "Skipping, too far away... ..."
+                    logger.debug("... ... ... Skipping, too far away. (" + pt_data['duration'] + ")")
                     continue
 
                 try:
-                    detail.pt_depart_time = pt_data['departTime']
-                    detail.pt_arrive_time = pt_data['arriveTime']
-                    detail.pt_duration = pt_data['duration']
+                    new_detail.pt_depart_time = pt_data['departTime']
+                    new_detail.pt_arrive_time = pt_data['arriveTime']
+                    new_detail.pt_duration = pt_data['duration']
                 except KeyError:
                     continue
 
 
+            logger.debug("... ... Checking google maps car travel time.")
+            gmaps = modules.gmaps.GMaps()
+            directions = gmaps.get_travel_time_between(detail['address'], "Melbourne, Oakleigh, Victoria, Australia")
+            if directions:
+                detail.oak_summary = directions
+
+
             # Get possible ADSL2+ speed
+            logger.debug("... ... Checking possible ADSL2+ speed.")
             adsl2 = modules.adsl2.ADSL2()
             adsl2_data = adsl2.get(address, browser)
 
             if adsl2_data:
                 if adsl2_data['estimated_speed'] < 8000:
-                    print "Internet is too slow... ..."
+                    logger.debug("... ... ... Internet will be too slow. (" + adsl2_data['estimated_speed'] + ")")
                     continue
 
                 try:
-                    detail.crow_fly_distance = adsl2_data['crow_fly_distance']
-                    detail.cable_length = adsl2_data['cable_length']
-                    detail.estimated_speed = adsl2_data['estimated_speed']
-                    print "Adsl2 data found ..."
+                    new_detail.crow_fly_distance = adsl2_data['crow_fly_distance']
+                    new_detail.cable_length = adsl2_data['cable_length']
+                    new_detail.estimated_speed = adsl2_data['estimated_speed']
                 except KeyError:
                     continue
 
-            detail.save()
+            # Allow the address to be seen
+            new_detail.status = "U"
+            new_detail.save()
 
             # Get nearby railways
+            logger.debug("... ... Getting nearby railways.")
             distances = gmaps.get_distance_from_railways(address)
 
             if distances:
-                print "Railway data found ..."
                 for distance in distances:
                     try:
                         RailwayPosition.objects.create(**{
-                            'detail': detail,
+                            'detail': new_detail,
                             'line_name': distance['line_name'],
                             'distance': distance['distance']
                         })
                     except KeyError:
                         continue
 
-            print "... House has been added."
-            logger.debug("... ... added address: " + address)
+            logger.debug("... ...  ... added address.")
 
         browser.close()
 

@@ -6,6 +6,9 @@ import selenium.webdriver.support.ui as ui
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 
+import logging
+logger = logging.getLogger("applog")
+
 class PublicTransport:
 
     """
@@ -31,8 +34,6 @@ class PublicTransport:
         The amount of time in seconds before retrying an address
     """
     def get(self, address, browser, retry_wait=2):
-        print "... ... Getting PTMelb Details"
-
         attempts = 0
         wait = ui.WebDriverWait(browser, 3)
 
@@ -90,7 +91,8 @@ class PublicTransport:
                     attempts += 1
                     # Wait 1 seconds before trying again
                     time.sleep(retry_wait)
-                    print "Failed to parse the address. Trying again. Attempt #", attempts
+                    logger.debug("... ... ... Failed to parse the address. Trying again. Attempt #" + attempts)
                     continue
                 else:
+                    logger.debug("... ... ... Failed all attempts. Skipping.")
                     return None

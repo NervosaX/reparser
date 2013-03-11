@@ -2,6 +2,9 @@ import time
 from math import radians, cos, sin, asin, sqrt
 from googlemaps import GoogleMaps, GoogleMapsError
 
+import logging
+logger = logging.getLogger("applog")
+
 """
 Any function related to using google maps
 """
@@ -50,7 +53,6 @@ class GMaps:
         parse
     """
     def get_distance_from_railways(self, address, max_distance=3, retry_wait=1):
-        print "... ... Getting GMaps Details"
         attempts = 0
         results = []
 
@@ -68,9 +70,10 @@ class GMaps:
                     attempts += 1
                     # Wait 1 seconds before trying again
                     time.sleep(retry_wait)
-                    print "Failed to parse the address. Trying again. Attempt #", attempts
+                    logger.debug("... ... ... Failed to parse the address. Trying again. Attempt #" + attempts)
                     continue
                 else:
+                    logger.debug("... ... ... Failed all attempts. Skipping.")
                     return None            
 
             # Get our results
@@ -104,5 +107,5 @@ class GMaps:
         if directions:
             try:
                 return directions["Directions"]["summaryHtml"]
-            except AttributeError:
+            except KeyError:
                 return None
