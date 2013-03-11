@@ -50,6 +50,7 @@ class Command(BaseCommand):
             if exists:
                 continue
 
+            address 
 
             suburb_excludes = [
                 'Frankston', 'Cranbourne', 'Carrum Downs', 'Pakenham', 'North Clyde', 
@@ -76,24 +77,21 @@ class Command(BaseCommand):
             gmaps = modules.gmaps.GMaps()
 
 
-            try:
-                details = {
-                    'address': detail['address'],
-                    'title': detail['title'],
-                    'price': detail['price'],
-                    'url': detail['url'],
-                    'bedrooms': detail['bedrooms'],
-                    'bathrooms': detail['bathrooms'],
-                    'carspaces': detail['carspaces'],
-                }
-            except KeyError:
-                continue
+            details = {
+                'address': detail['address'],
+                'title': detail['title'],
+                'price': detail['price'],
+                'url': detail['url'],
+                'bedrooms': detail['bedrooms'],
+                'bathrooms': detail['bathrooms'],
+                'carspaces': detail['carspaces'],
+            }
+
+            detail = Detail.objects.create(**details)
 
             directions = gmaps.get_travel_time_between(detail['address'], "Melbourne, Oakleigh, Victoria, Australia")
             if directions:
-                details.update({
-                    'oak_summary': directions
-                })
+                detail.oak_summary = directions
 
             if detail['bedrooms'] < 3:
                 continue
@@ -113,12 +111,9 @@ class Command(BaseCommand):
                     continue
 
                 try:
-                    details.update({
-                        'pt_depart_time': pt_data['departTime'],
-                        'pt_arrive_time': pt_data['arriveTime'],
-                        'pt_duration': pt_data['duration'],
-                    })
-                    print "PT Data found ..."
+                    detail.pt_depart_time = pt_data['departTime']
+                    detail.pt_arrive_time = pt_data['arriveTime']
+                    detail.pt_duration = pt_data['duration']
                 except KeyError:
                     continue
 
@@ -133,18 +128,14 @@ class Command(BaseCommand):
                     continue
 
                 try:
-                    details.update({
-                        'crow_fly_distance': adsl2_data['crow_fly_distance'],
-                        'cable_length': adsl2_data['cable_length'],
-                        'estimated_speed': adsl2_data['estimated_speed'],
-                    })
+                    detail.crow_fly_distance = adsl2_data['crow_fly_distance']
+                    detail.cable_length = adsl2_data['cable_length']
+                    detail.estimated_speed = adsl2_data['estimated_speed']
                     print "Adsl2 data found ..."
                 except KeyError:
                     continue
 
-
-
-            new_detail = Detail.objects.create(**details)
+            detail.save()
 
             # Get nearby railways
             distances = gmaps.get_distance_from_railways(address)
@@ -154,7 +145,7 @@ class Command(BaseCommand):
                 for distance in distances:
                     try:
                         RailwayPosition.objects.create(**{
-                            'detail': new_detail,
+                            'detail': detail,
                             'line_name': distance['line_name'],
                             'distance': distance['distance']
                         })
