@@ -9,7 +9,12 @@ from pyvirtualdisplay import Display
 from base.models import Detail, RailwayPosition
 
 import re
+import datetime
 from datetime import timedelta
+
+import logging
+
+logger = logging.getLogger("applog")
 
 def tdelta(input):
 
@@ -26,7 +31,8 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         print "--- RUNNING COLLECT DATA ---"
-        
+        logger.debug("Running on: " + str(datetime.datetime.now()))
+
         if settings.USE_HIDDEN_DISPLAY:
             display = Display(visible=0, size=(800, 600))
             display.start()
@@ -36,7 +42,7 @@ class Command(BaseCommand):
         realestate = modules.realestate.CollectData(**{
             'browser': browser,
             'search_string': settings.REAL_ESTATE_SEARCH_STRING,
-            # 'max_pages': 1,
+            #'max_pages': 1,    
         })
 
         details = realestate.get()
@@ -162,6 +168,7 @@ class Command(BaseCommand):
                         continue
 
             print "... House has been added."
+            logger.debug("... ... added address: " + address)
 
         browser.close()
 

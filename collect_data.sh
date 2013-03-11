@@ -1,3 +1,4 @@
+#!/bin/bash
 source /home/adam/.virtualenvs/rescraper/bin/activate
 
 SCRIPT=$(readlink -f $0)
