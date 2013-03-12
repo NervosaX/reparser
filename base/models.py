@@ -72,7 +72,8 @@ class Detail(models.Model):
     # Travel to Oakleigh
     oak_summary = models.CharField(
         max_length=100,
-        blank=True
+        blank=True,
+        null=True
         )
 
     def get_nearest_railway(self):
